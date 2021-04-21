@@ -1,10 +1,13 @@
 import 'package:devquiz/core/app_gradients.dart';
 import 'package:devquiz/core/core.dart';
 import 'package:devquiz/home/widgets/score_card/score_card_widget.dart';
+import 'package:devquiz/shared/models/user_model.dart';
 import 'package:flutter/material.dart';
 
 class AppbarWidget extends PreferredSize {
-  AppbarWidget()
+  final UserModel user;
+
+  AppbarWidget({required this.user})
       : super(
           preferredSize: Size.fromHeight(250),
           child: Container(
@@ -25,7 +28,7 @@ class AppbarWidget extends PreferredSize {
                               style: AppTextStyles.title,
                               children: [
                                 TextSpan(
-                                    text: "Péterson",
+                                    text: user.name,
                                     style: AppTextStyles.titleBold)
                               ]),
                         ),
@@ -35,13 +38,15 @@ class AppbarWidget extends PreferredSize {
                             decoration: BoxDecoration(
                                 borderRadius: BorderRadius.circular(10),
                                 image: DecorationImage(
-                                    image: NetworkImage(
-                                        "https://avatars.githubusercontent.com/u/26747556?v=4"))))
+                                    image: NetworkImage(user.photoUrl))))
                       ],
                     ),
                   ),
                   Align(
-                      alignment: Alignment(0.0, 1.0), child: ScoreCardWidget())
+                      alignment: Alignment(0.0, 1.0),
+                      child: ScoreCardWidget(
+                        score: user.score.toDouble(),
+                      ))
                 ],
               )),
         );

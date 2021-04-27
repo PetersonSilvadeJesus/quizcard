@@ -9,22 +9,15 @@
                     {"title": "Show de bola", "isRight": true},
                     {"title": "Negativo"}
                 ]
-            }
-          ],
-          "image": "blocks",
-          "level": "facil"
-    },
-    {
-        "title": "NLW 5 Flutter",
-          "questions": [
-            {"title": "Ta curtindo o Flutter?", 
-                "awnsers": [
-                    {"title": "Não"},
-                    {"title": "Sim"},
-                    {"title": "Show de bola", "isRight": true},
-                    {"title": "Negativo"}
-                ]
-            }
+            },
+            {"title": "Ta gostando do metodo de ensino?", 
+              "awnsers": [
+                  {"title": "Não"},
+                  {"title": "Sim"},
+                  {"title": "Show de bola", "isRight": true},
+                  {"title": "Negativo"}
+              ]
+          }
           ],
           "image": "blocks",
           "level": "facil"
